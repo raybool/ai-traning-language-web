@@ -6,8 +6,8 @@
     "dev": "next dev -p 5173",
     "build": "next build",
     "start": "next start -p 5173",
-    "format": "prettier --no-error-on-unmatched-pattern --write \"src/**/*.{ts,tsx,scss,css}\" \"*.{ts,mjs,json,md}\"",
-    "format:check": "prettier --no-error-on-unmatched-pattern --check \"src/**/*.{ts,tsx,scss,css}\" \"*.{ts,mjs,json,md}\""
+    "format": "prettier --write ./",
+    "format:check": "prettier --check ./"
   },
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^6.0.2",

@@ -46,12 +46,7 @@ export function useLessonSections() {
       status: LessonItemStatus,
       accessToken: string
     ) => {
-      await updateLessonItemStatus(
-        lessonId,
-        itemId,
-        status,
-        accessToken
-      );
+      await updateLessonItemStatus(lessonId, itemId, status, accessToken);
       setItems((prev) =>
         prev.map((it) => (it.id === itemId ? { ...it, status } : it))
       );

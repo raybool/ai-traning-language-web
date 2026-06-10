@@ -31,12 +31,7 @@ export default function LessonPage() {
         setLoading(false);
         return;
       }
-      if (
-        session.loading ||
-        session.error ||
-        !session.accessToken
-      )
-        return;
+      if (session.loading || session.error || !session.accessToken) return;
 
       setLoading(true);
       setError('');
@@ -51,12 +46,7 @@ export default function LessonPage() {
     };
 
     void run();
-  }, [
-    lessonId,
-    session.loading,
-    session.error,
-    session.accessToken,
-  ]);
+  }, [lessonId, session.loading, session.error, session.accessToken]);
 
   return (
     <AppShell title={t('lesson')} subtitle={t('practice_steps')}>

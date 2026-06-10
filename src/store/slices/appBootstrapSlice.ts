@@ -1,11 +1,11 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { PayloadAction, createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 import {
   LessonListItem,
   MySubscription,
   ProgressSummary,
-  getCurrentUser,
   getCurrentLesson,
+  getCurrentUser,
   getLessons,
   getMySubscription,
   getProgressSummary,
@@ -170,7 +170,7 @@ export const loadAppBootstrapThunk = createAsyncThunk<
       const progressPromise = getProgressSummary(
         resolveTimeZone(),
         accessToken,
-        'all',
+        'all'
       )
         .then((progressSummary) => ({
           progressSummary,
@@ -193,7 +193,9 @@ export const loadAppBootstrapThunk = createAsyncThunk<
         lessons: lessonsData.lessons,
         currentLesson: lessonsData.currentLesson,
         subscription: subscriptionData.subscription,
-        subscriptionRequired: isSubscriptionRequired(subscriptionData.subscription),
+        subscriptionRequired: isSubscriptionRequired(
+          subscriptionData.subscription
+        ),
         subscriptionError: subscriptionData.subscriptionError,
         progressSummary: progressData.progressSummary,
         progressError: progressData.progressError,
@@ -250,41 +252,50 @@ export const refreshLessonsThunk = createAsyncThunk<
 export const refreshSubscriptionThunk = createAsyncThunk<
   Pick<
     AppBootstrapPayload,
-    'subscription' | 'subscriptionRequired' | 'subscriptionError' | 'lastLoadedKey'
+    | 'subscription'
+    | 'subscriptionRequired'
+    | 'subscriptionError'
+    | 'lastLoadedKey'
   >,
   void,
   { state: RootState; rejectValue: string }
->('appBootstrap/refreshSubscription', async (_, { getState, rejectWithValue }) => {
-  try {
-    const { accessToken, key } = requireSession(getState());
+>(
+  'appBootstrap/refreshSubscription',
+  async (_, { getState, rejectWithValue }) => {
     try {
-      const subscription = await getMySubscription(accessToken);
-      return {
-        subscription,
-        subscriptionRequired: isSubscriptionRequired(subscription),
-        subscriptionError: '',
-        lastLoadedKey: key,
-      };
+      const { accessToken, key } = requireSession(getState());
+      try {
+        const subscription = await getMySubscription(accessToken);
+        return {
+          subscription,
+          subscriptionRequired: isSubscriptionRequired(subscription),
+          subscriptionError: '',
+          lastLoadedKey: key,
+        };
+      } catch (error) {
+        return {
+          subscription: null,
+          subscriptionRequired: false,
+          subscriptionError: getErrorMessage(
+            error,
+            'Failed to load subscription'
+          ),
+          lastLoadedKey: key,
+        };
+      }
     } catch (error) {
-      return {
-        subscription: null,
-        subscriptionRequired: false,
-        subscriptionError: getErrorMessage(
-          error,
-          'Failed to load subscription'
-        ),
-        lastLoadedKey: key,
-      };
+      return rejectWithValue(
+        getErrorMessage(error, 'Failed to refresh subscription')
+      );
     }
-  } catch (error) {
-    return rejectWithValue(
-      getErrorMessage(error, 'Failed to refresh subscription')
-    );
   }
-});
+);
 
 export const refreshProgressThunk = createAsyncThunk<
-  Pick<AppBootstrapPayload, 'progressSummary' | 'progressError' | 'lastLoadedKey'>,
+  Pick<
+    AppBootstrapPayload,
+    'progressSummary' | 'progressError' | 'lastLoadedKey'
+  >,
   void,
   { state: RootState; rejectValue: string }
 >('appBootstrap/refreshProgress', async (_, { getState, rejectWithValue }) => {
@@ -294,7 +305,7 @@ export const refreshProgressThunk = createAsyncThunk<
       const progressSummary = await getProgressSummary(
         resolveTimeZone(),
         accessToken,
-        'all',
+        'all'
       );
       return {
         progressSummary,
@@ -309,14 +320,18 @@ export const refreshProgressThunk = createAsyncThunk<
       };
     }
   } catch (error) {
-    return rejectWithValue(getErrorMessage(error, 'Failed to refresh progress'));
+    return rejectWithValue(
+      getErrorMessage(error, 'Failed to refresh progress')
+    );
   }
 });
 
 export const refreshCourseProgressThunk = createAsyncThunk<
   Pick<
     AppBootstrapState,
-    'courseProgressSummary' | 'courseProgressError' | 'courseProgressLastLoadedKey'
+    | 'courseProgressSummary'
+    | 'courseProgressError'
+    | 'courseProgressLastLoadedKey'
   >,
   { force?: boolean } | void,
   { state: RootState; rejectValue: string }
@@ -339,7 +354,7 @@ export const refreshCourseProgressThunk = createAsyncThunk<
         const courseProgressSummary = await getProgressSummary(
           resolveTimeZone(),
           accessToken,
-          'current_course',
+          'current_course'
         );
         return {
           courseProgressSummary,
@@ -351,14 +366,14 @@ export const refreshCourseProgressThunk = createAsyncThunk<
           courseProgressSummary: null,
           courseProgressError: getErrorMessage(
             error,
-            'Failed to load course progress',
+            'Failed to load course progress'
           ),
           courseProgressLastLoadedKey: `${key}:${currentCourseId}`,
         };
       }
     } catch (error) {
       return rejectWithValue(
-        getErrorMessage(error, 'Failed to refresh course progress'),
+        getErrorMessage(error, 'Failed to refresh course progress')
       );
     }
   },
@@ -377,7 +392,7 @@ export const refreshCourseProgressThunk = createAsyncThunk<
         `${key}:${state.appBootstrap.currentCourseId}`
       );
     },
-  },
+  }
 );
 
 export const appBootstrapSlice = createSlice({

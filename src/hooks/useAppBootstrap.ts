@@ -3,9 +3,9 @@
 import { useEffect } from 'react';
 
 import { useAppDispatch, useAppSelector } from '../store/hooks';
-import { useSession } from './useSession';
 import { selectAppBootstrap, selectSession } from '../store/selectors';
 import { loadAppBootstrapThunk } from '../store/slices/appBootstrapSlice';
+import { useSession } from './useSession';
 
 export function useAppBootstrap() {
   const dispatch = useAppDispatch();

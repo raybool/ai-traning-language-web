@@ -3,7 +3,10 @@ export type MiniAppButtonParams = {
   webAppUrl: string;
 };
 
-export function getMiniAppUrl(baseUrl: string, params?: Record<string, string | number | boolean>): string {
+export function getMiniAppUrl(
+  baseUrl: string,
+  params?: Record<string, string | number | boolean>
+): string {
   const url = new URL(baseUrl);
   if (params) {
     Object.entries(params).forEach(([key, value]) => {

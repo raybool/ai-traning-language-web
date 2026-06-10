@@ -461,16 +461,22 @@ export async function completeOnboarding(
   lesson: OnboardingLesson;
   nextPath: string;
 }> {
-  const res = await fetchWithTimeout(`${API_BASE_URL}/users/me/onboarding/complete`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      ...authHeaders(accessToken),
-    },
-    body: JSON.stringify(data),
-  });
+  const res = await fetchWithTimeout(
+    `${API_BASE_URL}/users/me/onboarding/complete`,
+    {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...authHeaders(accessToken),
+      },
+      body: JSON.stringify(data),
+    }
+  );
   if (!res.ok) {
-    throw await parseErrorResponse('POST /users/me/onboarding/complete failed', res);
+    throw await parseErrorResponse(
+      'POST /users/me/onboarding/complete failed',
+      res
+    );
   }
   return (await res.json()) as {
     user: UserByTelegram;
@@ -483,14 +489,20 @@ export async function completeOnboarding(
 export async function getCurrentOnboardingLesson(
   accessToken: string
 ): Promise<OnboardingLesson> {
-  const res = await fetchWithTimeout(`${API_BASE_URL}/onboarding-lessons/current`, {
-    method: 'GET',
-    headers: {
-      ...authHeaders(accessToken),
-    },
-  });
+  const res = await fetchWithTimeout(
+    `${API_BASE_URL}/onboarding-lessons/current`,
+    {
+      method: 'GET',
+      headers: {
+        ...authHeaders(accessToken),
+      },
+    }
+  );
   if (!res.ok) {
-    throw await parseErrorResponse('GET /onboarding-lessons/current failed', res);
+    throw await parseErrorResponse(
+      'GET /onboarding-lessons/current failed',
+      res
+    );
   }
   return (await res.json()) as OnboardingLesson;
 }
@@ -612,12 +624,16 @@ export async function createCourseFromTemplate(
 export async function createCourseFromOnboarding(
   accessToken: string
 ): Promise<Course> {
-  const res = await fetchWithTimeout(`${API_BASE_URL}/courses/from-onboarding`, {
-    method: 'POST',
-    headers: {
-      ...authHeaders(accessToken),
+  const res = await fetchWithTimeout(
+    `${API_BASE_URL}/courses/from-onboarding`,
+    {
+      method: 'POST',
+      headers: {
+        ...authHeaders(accessToken),
+      },
     },
-  }, COURSE_CREATION_TIMEOUT_MS);
+    COURSE_CREATION_TIMEOUT_MS
+  );
   if (!res.ok) {
     throw await parseErrorResponse('POST /courses/from-onboarding failed', res);
   }
@@ -755,12 +771,15 @@ export async function setAutoRenew(
 export async function cancelSubscription(
   accessToken: string
 ): Promise<MySubscription> {
-  const res = await fetchWithTimeout(`${API_BASE_URL}/subscriptions/me/cancel`, {
-    method: 'POST',
-    headers: {
-      ...authHeaders(accessToken),
-    },
-  });
+  const res = await fetchWithTimeout(
+    `${API_BASE_URL}/subscriptions/me/cancel`,
+    {
+      method: 'POST',
+      headers: {
+        ...authHeaders(accessToken),
+      },
+    }
+  );
   if (!res.ok) {
     throw await parseErrorResponse('POST /subscriptions/me/cancel failed', res);
   }

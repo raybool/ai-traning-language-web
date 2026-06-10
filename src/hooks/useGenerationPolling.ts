@@ -80,7 +80,7 @@ export function useGenerationPolling() {
             setState('failed');
             handlers.onFailed(
               mapGenerationError(failed.payload?.error),
-              failed.payload as GenerationFailedPayload,
+              failed.payload as GenerationFailedPayload
             );
             stop();
             return;
