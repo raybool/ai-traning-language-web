@@ -1,0 +1,58 @@
+.loadingText {
+  margin: 0;
+}
+
+.heroCard {
+  background: linear-gradient(135deg, #0ea5a4 0%, #2f80ed 100%) !important;
+  color: #fff;
+}
+
+.heroLabel {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.heroTitle {
+  margin: 4px 0 10px;
+  font-size: 24px;
+}
+
+.heroProgress {
+  margin-bottom: 10px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.weeklyHeader {
+  margin-bottom: 10px;
+}
+
+.barsGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  align-items: end;
+  height: 84px;
+}
+
+.barItem {
+  text-align: center;
+}
+
+.barFill {
+  margin: 0 auto;
+  width: 14px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--primary-2), var(--primary));
+  height: var(--bar-height, 20%);
+  min-height: 8px;
+}
+
+.barLabel {
+  font-size: 11px;
+  margin-top: 4px;
+}

@@ -1,0 +1,8 @@
+.card:global(.ant-btn) {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-16);
+  box-shadow: var(--shadow-1);
+  padding: 14px;
+  height: auto;
+}

@@ -1,0 +1,160 @@
+.textBlock {
+  margin: 8px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.blockHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.addPaymentMethodButton {
+  min-width: 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 14px;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blockSubtitle {
+  margin: 6px 0 0;
+}
+
+.bindNote {
+  margin: 12px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.paymentMethodsList {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.paymentMethodItem {
+  position: relative;
+  display: flex;
+  min-height: 80px;
+  width: calc(50% - 5px);
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  font-size: 14px;
+  border: 1px solid rgba(47, 128, 237, 0.12);
+  background: rgba(246, 250, 255, 0.8);
+}
+
+.paymentMethodTopRow {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.paymentMethodInfo {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.paymentMethodTitleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.deletePaymentMethodButton {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: #606060;
+  font-size: 18px;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.currentPaymentMethod {
+  border: 1px solid rgba(60, 237, 47, 0.12);
+  background: rgba(248, 255, 246, 0.8);
+}
+
+.deletePaymentMethodButton:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.defaultBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(14, 165, 164, 0.12);
+  color: #0f5c5b;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+@media (max-width: 640px) {
+  .blockHeader {
+    flex-direction: column;
+  }
+
+  .paymentMethodItem {
+    flex-direction: column;
+  }
+}
+
+.plusBlock:global(.ant-btn) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px !important;
+  width: calc(50% - 5px);
+  border-radius: 14px;
+  border: 1px solid rgba(47, 128, 237, 0.12);
+  background: rgba(246, 250, 255, 0.8);
+  color: rgba(31, 83, 152, 0.406);
+
+  p {
+    margin: 0;
+    font-size: 12;
+  }
+}
+
+.loaderBlock {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(246, 250, 255, 0.57);
+  color: rgba(47, 129, 237, 0.47);
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+}

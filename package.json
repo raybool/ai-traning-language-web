@@ -1,0 +1,35 @@
+{
+  "name": "webapp-service",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev -p 5173",
+    "build": "next build",
+    "start": "next start -p 5173",
+    "format": "prettier --no-error-on-unmatched-pattern --write \"src/**/*.{ts,tsx,scss,css}\" \"*.{ts,mjs,json,md}\"",
+    "format:check": "prettier --no-error-on-unmatched-pattern --check \"src/**/*.{ts,tsx,scss,css}\" \"*.{ts,mjs,json,md}\""
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^6.0.2",
+    "@types/node": "^22.10.0",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "prettier": "^3.8.1",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^6.1.0",
+    "@reduxjs/toolkit": "^2.11.0",
+    "antd": "^6.3.2",
+    "classnames": "^2.5.1",
+    "next": "^16.1.6",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-redux": "^9.2.0",
+    "sass": "^1.93.2"
+  },
+  "overrides": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3"
+  }
+}

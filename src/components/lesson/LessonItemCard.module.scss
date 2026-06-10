@@ -1,0 +1,67 @@
+.header {
+  margin-bottom: 8px;
+  gap: 8px;
+}
+
+.title {
+  overflow-wrap: anywhere;
+  min-width: 0;
+  flex: 1;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checkboxLabel {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--surface);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.checkboxLabelKnown {
+  border-color: #00c000;
+  background: #00c000;
+  box-shadow: 0 2px 8px rgba(0, 192, 0, 0.35);
+}
+
+.checkboxInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.checkmark {
+  width: 10px;
+  height: 6px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: translateY(-1px) rotate(-45deg);
+  pointer-events: none;
+}
+
+.text {
+  margin: 0 0 8px;
+  overflow-wrap: anywhere;
+}
+
+.translation {
+  margin: 0 0 10px;
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}

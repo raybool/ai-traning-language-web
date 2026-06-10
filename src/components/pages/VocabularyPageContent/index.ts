@@ -1,0 +1,1 @@
+export { VocabularyPageContent } from './VocabularyPageContent';

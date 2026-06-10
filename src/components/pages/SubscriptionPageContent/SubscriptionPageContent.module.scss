@@ -1,0 +1,153 @@
+.textReset {
+  margin: 0;
+}
+
+.errorText {
+  margin: 0;
+  color: var(--danger);
+}
+
+.rowBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.statusPill {
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.textBlock {
+  margin: 8px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.featuredCard {
+  position: relative;
+  border-color: rgba(47, 128, 237, 0.28);
+  background:
+    linear-gradient(180deg, rgba(240, 247, 255, 0.92), rgba(255, 255, 255, 1)),
+    var(--surface);
+  box-shadow:
+    0 12px 28px rgba(47, 128, 237, 0.12),
+    0 0 0 1px rgba(47, 128, 237, 0.08);
+}
+
+.featuredCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(
+    135deg,
+    rgba(14, 165, 164, 0.55),
+    rgba(47, 128, 237, 0.75)
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.featuredBadgeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.featuredBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), #ffd873);
+  color: #4a3510;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 14px rgba(246, 200, 79, 0.24);
+}
+
+.featuredNote {
+  color: var(--primary-2);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.featuredTitle {
+  color: #10253f;
+}
+
+.featuredPrice {
+  color: var(--primary-2);
+  font-weight: 700;
+}
+
+.planIntro {
+  margin: 12px 0 0;
+  color: var(--text-muted);
+  font-size: 17px;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.planExtrasBlock {
+  margin-top: 12px;
+}
+
+.planExtrasLabel {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.planExtrasList {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.planExtrasList li + li {
+  margin-top: 8px;
+}
+
+.actionRow {
+  margin-top: 12px;
+}
+
+.cancelSubscriptionWrap {
+  margin-top: 8px;
+}
+
+.cancelSubscriptionButton {
+  width: 100%;
+  min-height: 52px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #d43f57, #b91c3a) !important;
+  box-shadow: 0 14px 28px rgba(185, 28, 58, 0.18);
+}
+
+.resumeSubscriptionButton {
+  width: 100%;
+  min-height: 52px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0ea5a4, #2f80ed) !important;
+  box-shadow: 0 14px 28px rgba(47, 128, 237, 0.18);
+}

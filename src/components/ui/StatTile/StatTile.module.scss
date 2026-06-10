@@ -1,0 +1,15 @@
+.tile {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  padding: 10px;
+  background: var(--surface);
+}
+
+.label {
+  font-size: 12px;
+}
+
+.value {
+  font-weight: 800;
+  font-size: 20px;
+}

@@ -1,0 +1,47 @@
+.textReset {
+  margin: 0;
+}
+
+.successText {
+  margin: 0;
+  color: var(--success);
+  font-weight: 700;
+}
+
+.errorText {
+  margin: 0;
+  color: var(--danger);
+}
+
+.sectionHeader {
+  margin-bottom: 10px;
+}
+
+.courseCard:global(.ant-btn) {
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column !important;
+  align-items: start;
+
+  .nameBlock {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+}
+
+.progressText {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.paywallBlock {
+  display: grid;
+  gap: 10px;
+}

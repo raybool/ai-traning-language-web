@@ -1,0 +1,63 @@
+.textReset {
+  margin: 0;
+}
+
+.errorText {
+  margin: 0;
+  color: var(--danger);
+}
+
+.progressRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.progressDot {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--line) 88%, white);
+}
+
+.progressDotActive {
+  background: linear-gradient(90deg, #3d7ef8, #5ca6ff);
+}
+
+.optionBlock {
+  display: grid;
+  gap: 12px;
+}
+
+.optionsGrid {
+  display: grid;
+  gap: 10px;
+}
+
+.optionCard {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff, #f7fbff);
+  color: var(--text);
+  padding: 14px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.optionCardActive {
+  border-color: #3d7ef8;
+  box-shadow: 0 0 0 3px color-mix(in srgb, #3d7ef8 16%, transparent);
+  background: linear-gradient(180deg, #f2f8ff, #ffffff);
+}
+
+.actionsRow {
+  display: flex;
+  gap: 10px;
+}
+
+.actionsRow :global(.ant-btn) {
+  flex: 1;
+}

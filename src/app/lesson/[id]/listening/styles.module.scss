@@ -1,0 +1,295 @@
+.textReset {
+  margin: 0;
+}
+
+.errorText {
+  margin: 0;
+  color: var(--danger);
+}
+
+.taskHeader {
+  margin-bottom: 8px;
+}
+
+.tasks {
+  display: grid;
+  gap: 8px;
+}
+
+.task {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.taskActive {
+  border-color: var(--primary-2);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary-2) 16%, transparent);
+}
+
+.taskTitle {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.phaseHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.phaseBlock {
+  display: grid;
+  gap: 12px;
+}
+
+.phaseTitle {
+  margin: 0;
+  font-size: 20px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.listBullets {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+}
+
+.keywordList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keywordChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  padding: 6px 10px;
+  overflow-wrap: anywhere;
+}
+
+.keywordTranslate {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.player {
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  padding: 16px;
+}
+
+.audioPlayer {
+  width: 100%;
+}
+
+.playerText {
+  margin: 0;
+}
+
+.watchControls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.segmentBlock {
+  display: grid;
+  gap: 8px;
+}
+
+.segmentList {
+  display: grid;
+  gap: 8px;
+}
+
+.segmentButton {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  text-align: left;
+  padding: 8px 10px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.segmentSpeaker {
+  font-weight: 700;
+}
+
+.segmentButtonActive {
+  border-color: var(--primary-2);
+  background: color-mix(in srgb, var(--primary-2) 10%, var(--surface));
+}
+
+.subtitles {
+  margin: 0;
+  border-left: 3px solid var(--primary-2);
+  padding-left: 8px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.keyPhrase {
+  border: 1px solid color-mix(in srgb, #0f8f51 35%, var(--line));
+  background: color-mix(in srgb, #0f8f51 8%, var(--surface));
+  border-radius: 12px;
+  padding: 10px 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.helperText {
+  margin: 0;
+  color: var(--muted);
+}
+
+.quizProgress {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.quizQuestion {
+  margin: 0;
+  font-weight: 600;
+}
+
+.options {
+  display: grid;
+  gap: 8px;
+}
+
+.optionButton {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.optionSelected {
+  border-color: var(--primary-2);
+  background: color-mix(in srgb, var(--primary-2) 10%, var(--surface));
+}
+
+.orderLinesList {
+  display: grid;
+  gap: 8px;
+}
+
+.orderLineButton {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 8px 10px;
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 8px;
+  align-items: start;
+  text-align: left;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.orderLineButtonSelected {
+  border-color: var(--primary-2);
+  background: color-mix(in srgb, var(--primary-2) 10%, var(--surface));
+}
+
+.orderLineIndex {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--primary-2) 20%, var(--surface));
+}
+
+.orderLineText {
+  overflow-wrap: anywhere;
+}
+
+.inlineActions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.quizFeedback {
+  margin: 0;
+  font-size: 13px;
+}
+
+.quizFeedbackSuccess {
+  color: #0f8f51;
+}
+
+.quizFeedbackError {
+  color: var(--danger);
+}
+
+.summaryState {
+  margin: 0;
+  font-weight: 600;
+}
+
+.summarySuccess {
+  color: #0f8f51;
+}
+
+.summaryWarning {
+  color: #8a5a00;
+}
+
+.rememberPhrase {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: var(--surface-soft);
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.linkReset {
+  text-decoration: none;
+}

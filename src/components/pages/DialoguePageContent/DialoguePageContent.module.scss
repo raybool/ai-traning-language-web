@@ -1,0 +1,182 @@
+.textReset {
+  margin: 0;
+}
+
+.errorText {
+  margin: 0;
+  color: var(--danger);
+}
+
+.dialoguesList {
+  display: grid;
+  gap: 8px;
+}
+
+.dialogueChips {
+  display: grid;
+  gap: 8px;
+}
+
+.dialogueChip {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  padding: 10px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dialogueChipActive {
+  border-color: var(--primary-2);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary-2) 16%, transparent);
+}
+
+.dialogueChipTitle {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.modeTabs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.modeTab {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.modeTabActive {
+  border-color: var(--primary-2);
+  background: color-mix(in srgb, var(--primary-2) 10%, var(--surface));
+}
+
+.parseFallback {
+  margin: 0;
+}
+
+.chatRowAssistant {
+  display: grid;
+  justify-items: start;
+}
+
+.chatRowStudent {
+  display: grid;
+  justify-items: end;
+}
+
+.bubble {
+  max-width: 86%;
+  border-radius: 16px;
+  padding: 10px 12px;
+}
+
+.bubbleAssistant {
+  background: #ecf3ff;
+}
+
+.bubbleStudent {
+  background: #dff4ea;
+}
+
+.typingBubble {
+  min-width: 64px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typingDots {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.typingDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary-2) 58%, white);
+  animation: dialogueTypingPulse 1.15s infinite ease-in-out;
+}
+
+.typingDot:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.typingDot:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+@keyframes dialogueTypingPulse {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+
+  40% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+.hint {
+  margin: 6px 0 0;
+  font-size: 12px;
+}
+
+.feedback {
+  margin: 8px 0 0;
+  font-size: 12px;
+}
+
+.form {
+  display: grid;
+  gap: 8px;
+}
+
+.textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  resize: vertical;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.formActions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.premiumCard {
+  border: 1px solid color-mix(in srgb, var(--primary-2) 30%, var(--line));
+  border-radius: 12px;
+  padding: 12px;
+  background: color-mix(in srgb, var(--primary-2) 8%, var(--surface));
+  display: grid;
+  gap: 8px;
+}
+
+.counterRow {
+  display: flex;
+  justify-content: flex-end;
+}

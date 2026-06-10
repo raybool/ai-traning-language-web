@@ -1,0 +1,243 @@
+.textReset {
+  margin: 0;
+}
+
+.errorText {
+  margin: 0;
+  color: var(--danger);
+}
+
+.rulePicker {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+
+.rulePickerTitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.rulePickerScroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  min-width: 0;
+  scrollbar-width: thin;
+}
+
+.ruleChip {
+  flex: 0 0 auto;
+  width: min(220px, calc(100vw - 72px));
+  min-height: 44px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--text);
+  padding: 8px 10px;
+  display: grid;
+  gap: 6px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ruleChipActive {
+  border-color: var(--primary-2);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary-2) 35%, transparent);
+  background: color-mix(in srgb, var(--primary-2) 9%, var(--surface));
+}
+
+.ruleChipText {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ruleChipStatus {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  width: fit-content;
+}
+
+.ruleChipStatusNew {
+  background: color-mix(in srgb, var(--line) 35%, var(--surface));
+  color: var(--muted);
+}
+
+.ruleChipStatusLearning {
+  background: color-mix(in srgb, #ffd98a 55%, var(--surface));
+  color: #7a5400;
+}
+
+.ruleChipStatusKnown {
+  background: color-mix(in srgb, #7ed9a3 45%, var(--surface));
+  color: #0f8f51;
+}
+
+.progressHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.progressLabel {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.successFlag {
+  margin: 10px 0 0;
+  color: #0f8f51;
+  font-size: 13px;
+}
+
+.stepCard {
+  display: grid;
+  gap: 10px;
+}
+
+.stepTitle {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.stepText {
+  margin: 0;
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.patternList {
+  display: grid;
+  gap: 8px;
+}
+
+.patternCard {
+  border: 1px solid var(--line);
+  background: var(--surface-soft);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.patternTemplate {
+  margin: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.patternHint {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.examplesList {
+  display: grid;
+  gap: 8px;
+}
+
+.exampleCard {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: var(--surface);
+}
+
+.exampleText {
+  margin: 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.exampleTranslate {
+  margin: 6px 0 0;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.mistakeWrong {
+  border: 1px solid color-mix(in srgb, var(--danger) 35%, var(--line));
+  background: color-mix(in srgb, var(--danger) 8%, var(--surface));
+  border-radius: 12px;
+  padding: 10px 12px;
+  overflow-wrap: anywhere;
+}
+
+.mistakeCorrect {
+  border: 1px solid color-mix(in srgb, #0f8f51 35%, var(--line));
+  background: color-mix(in srgb, #0f8f51 8%, var(--surface));
+  border-radius: 12px;
+  padding: 10px 12px;
+  overflow-wrap: anywhere;
+}
+
+.practiceQuestion {
+  margin: 0;
+  font-weight: 600;
+}
+
+.options {
+  display: grid;
+  gap: 8px;
+}
+
+.optionButton {
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.optionSelected {
+  border-color: var(--primary-2);
+  background: color-mix(in srgb, var(--primary-2) 10%, var(--surface));
+}
+
+.practiceFeedback {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+
+.practiceFeedbackSuccess {
+  color: #0f8f51;
+}
+
+.practiceFeedbackError {
+  color: var(--danger);
+}
+
+.summaryList {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+}
+
+.summaryItem {
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}

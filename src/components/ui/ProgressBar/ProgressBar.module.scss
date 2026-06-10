@@ -1,0 +1,14 @@
+.track {
+  width: 100%;
+  background: #e7edf5;
+  border-radius: 999px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  width: var(--progress, 0%);
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  transition: width 250ms ease;
+}

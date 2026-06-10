@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button:global(.ant-btn) {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  align-items: center;
+}
+
+.placeholder {
+  margin-top: 14px;
+  margin-bottom: 0;
+}
+.textBlock {
+  text-align: start;
+}

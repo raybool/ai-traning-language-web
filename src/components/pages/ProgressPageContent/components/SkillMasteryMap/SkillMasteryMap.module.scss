@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  gap: 10px;
+}
+
+.rowHeader {
+  margin-bottom: 4px;
+}
+
+.track {
+  height: 10px;
+  background: #e7edf5;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.fill {
+  width: var(--skill-width, 0%);
+  height: 100%;
+  background: var(--skill-color, var(--primary));
+}

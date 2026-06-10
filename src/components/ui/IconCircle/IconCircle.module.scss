@@ -1,0 +1,10 @@
+.icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: #ecf4ff;
+  color: var(--icon-color, var(--primary-2));
+  font-size: 20px;
+}

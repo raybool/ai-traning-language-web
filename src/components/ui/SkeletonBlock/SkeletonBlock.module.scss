@@ -1,0 +1,7 @@
+.skeleton {
+  height: var(--skeleton-height, 72px);
+  border-radius: 12px;
+  background: linear-gradient(90deg, #edf2f8 0%, #f6f8fb 50%, #edf2f8 100%);
+  background-size: 180% 100%;
+  animation: skeleton 1.2s ease-in-out infinite;
+}

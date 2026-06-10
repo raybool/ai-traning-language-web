@@ -1,0 +1,166 @@
+.textReset {
+  margin: 0;
+}
+
+.errorText {
+  margin: 0;
+  color: var(--danger);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.wordGrid {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.wordCard {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff, #f7fbff);
+  padding: 12px 14px;
+  display: grid;
+  gap: 4px;
+}
+
+.exampleText {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.counterRow {
+  display: flex;
+  justify-content: flex-end;
+  margin: 8px 0 12px;
+}
+
+.chatRowAssistant {
+  display: grid;
+  justify-items: start;
+}
+
+.chatRowStudent {
+  display: grid;
+  justify-items: end;
+}
+
+.bubble {
+  max-width: 86%;
+  border-radius: 16px;
+  padding: 10px 12px;
+}
+
+.bubbleAssistant {
+  background: #ecf3ff;
+}
+
+.bubbleStudent {
+  background: #dff4ea;
+}
+
+.feedback {
+  margin: 8px 0 0;
+  font-size: 12px;
+}
+
+.typingBubble {
+  min-width: 64px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typingDots {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.typingDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary-2) 58%, white);
+  animation: welcomeTypingPulse 1.15s infinite ease-in-out;
+}
+
+.typingDot:nth-child(2) {
+  animation-delay: 0.16s;
+}
+
+.typingDot:nth-child(3) {
+  animation-delay: 0.32s;
+}
+
+@keyframes welcomeTypingPulse {
+  0%,
+  80%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.35;
+  }
+
+  40% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+.form {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  padding: 10px 12px;
+  resize: vertical;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.actionsColumn {
+  display: grid;
+  gap: 10px;
+}
+
+.victoryCard {
+  background: linear-gradient(180deg, #eff7ff, #ffffff);
+  border: 1px solid color-mix(in srgb, #3d7ef8 20%, var(--line));
+}
+
+.victoryStats {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.victoryStat {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.75);
+  display: grid;
+  gap: 6px;
+}
+
+.victoryLabel {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.paywallCard {
+  border: 1px solid color-mix(in srgb, #3d7ef8 18%, var(--line));
+}

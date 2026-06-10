@@ -1,0 +1,19 @@
+.button {
+  min-height: 46px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.solid {
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  box-shadow: var(--shadow-1);
+}
+
+.ghost {
+  border: 1px solid var(--line);
+  color: var(--text);
+  background: var(--surface);
+}

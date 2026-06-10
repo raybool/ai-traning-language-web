@@ -1,0 +1,9 @@
+build/
+storybook-static
+
+public/css/
+public/images/
+public/js/
+public/landing.html
+public/privacy-policy.html
+public/terms-of-use.html

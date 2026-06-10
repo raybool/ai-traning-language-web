@@ -1,0 +1,43 @@
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--surface-soft);
+}
+
+.grammar {
+  color: var(--cat-grammar);
+}
+
+.vocabulary {
+  color: var(--cat-vocab);
+}
+
+.dialogues {
+  color: var(--cat-dialogue);
+}
+
+.listening {
+  color: var(--cat-listening);
+}
+
+.dotGrammar {
+  background: var(--cat-grammar);
+}
+
+.dotVocabulary {
+  background: var(--cat-vocab);
+}
+
+.dotDialogues {
+  background: var(--cat-dialogue);
+}
+
+.dotListening {
+  background: var(--cat-listening);
+}
